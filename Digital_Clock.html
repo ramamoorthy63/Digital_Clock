@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="day23.css">
+</head>
+<style>
+    span{
+        font-size: 15vw;
+        font-weight: 800;
+    }
+</style>
+<body>
+<span class="hourse">00</span>
+<span>:</span>
+<span class="minuts">00</span>
+<span>:</span>
+<span class="seconds">00</span>
+<span id="day">Am</span>
+
+
+
+<script>
+    function Time(){
+
+    let clock = new Date()
+    let hr = clock.getHours()
+    let min = clock.getMinutes()
+    let sec = clock.getSeconds()
+    let hour = document.querySelector(".hourse")
+    if(hr>12)
+    day.innerHTML='Pm'
+    if(hr>12)
+    hr=hr-12
+    if(hr<10)
+    hr='0'+hr
+    hour.innerHTML = hr
+    let mins = document.querySelector(".minuts")
+    if(min<10)
+    min='0'+min
+    mins.innerHTML = min
+    let secs = document.querySelector(".seconds")
+    if(sec<10)
+    sec='0'+sec
+    secs.innerHTML = sec
+    }
+
+    setInterval(Time,1000)
+ 
+</script>
+</body>
+</html>
